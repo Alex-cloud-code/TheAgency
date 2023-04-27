@@ -13,6 +13,22 @@
     }
 }
 
+@keyframes moving {
+    35% {
+        transform: translateX(150px);
+    }
+
+    50% {
+        transform: translateX(150px) scaleX(-1);
+    }
+
+    85% {
+        transform: translateX(0px) scaleX(-1);
+    }
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -101,6 +117,14 @@ a {
     vertical-align: text-bottom;
 }
 
+.text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #000000;
+}
+
 .top__text {
     width: 544px;
     margin-top: 37px;
@@ -108,15 +132,6 @@ a {
     height: 73px;
     display: flex;
     align-items: center;
-}
-
-.text {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
-    color: #000000;
-    
 }
 
 .button {
@@ -142,7 +157,6 @@ a {
 
 .service {
     padding-top: 108px;
-    
 }
 
 .servise__box {
@@ -163,12 +177,13 @@ a {
     font-weight: 700;
     font-size: 42px;
     line-height: 55px;
-    letter-spacing: 0.42px;
+    letter-spacing: 0.38px;
     text-transform: uppercase;
     color: #000000;
 }
 
 .servise__heading {
+    letter-spacing: 0.42px;
     display: flex;
     align-items: center;
     height: 87px;
@@ -225,8 +240,12 @@ a {
     transform: translateX(150px);
 }
 
+.service__item:hover .img_moving {
+    animation: moving 2s linear;
+}
+
 .service__item:hover .img_pulse {
-    animation: pulse 1.5s linear 0s;
+    animation: pulse 1.5s linear;
 }
 
 .service__heading {
@@ -237,4 +256,66 @@ a {
     color: #000000;
     margin-top: 32px;
     margin-bottom: 13px;
+}
+
+.products {
+    margin-top: 104px;
+    margin-bottom: 16px;
+}
+
+.heading__center {
+    text-align: center;
+}
+
+.products__text {
+    width: 536px;
+    margin: 28px auto 34px;
+    text-align: center;
+}
+
+.products__line {
+    width: 134px;
+    height: 5px;
+    background-color: #FF2D2D;
+    margin: auto;
+}
+
+.products__box {
+    padding-top: 86px;
+}
+
+.products__links {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+}
+
+.products__link {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: 0.22px;
+    text-transform: uppercase;
+    color: #000000;
+    transition: color .3s;
+}
+
+.products__link:hover {
+    color: #FF2D2D;
+}
+
+.products__link_active {
+    color: #FF2D2D;
+}
+
+.products__items {
+    margin-top: 58px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.products__item {
+    display: flex;
 }
