@@ -27,8 +27,6 @@
     }
 }
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -44,9 +42,14 @@ img {
 
 a {
     text-decoration: none;
+    transition: .3s;
 }
 
-.center {
+a:hover {
+    text-decoration: underline;
+}
+
+.section {
     padding-left: calc(50% - 1250px / 2);
     padding-right: calc(50% - 1250px / 2);
 }
@@ -129,9 +132,9 @@ a {
     width: 544px;
     margin-top: 37px;
     margin-bottom: 64px;
-    height: 73px;
     display: flex;
     align-items: center;
+    height: 73px;
 }
 
 .button {
@@ -159,7 +162,7 @@ a {
     padding-top: 108px;
 }
 
-.servise__box {
+.service__box {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -176,13 +179,12 @@ a {
     font-style: normal;
     font-weight: 700;
     font-size: 42px;
-    line-height: 55px;
     letter-spacing: 0.38px;
     text-transform: uppercase;
     color: #000000;
 }
 
-.servise__heading {
+.service__heading {
     letter-spacing: 0.42px;
     display: flex;
     align-items: center;
@@ -216,7 +218,7 @@ a {
 }
 
 .service__info {
-    width: 610px;
+    max-width: 610px;
     display: flex;
     flex-wrap: wrap;
     column-gap: 20px;
@@ -248,7 +250,7 @@ a {
     animation: pulse 1.5s linear;
 }
 
-.service__heading {
+.service-item__heading {
     font-style: italic;
     font-weight: 600;
     font-size: 24px;
@@ -256,6 +258,7 @@ a {
     color: #000000;
     margin-top: 32px;
     margin-bottom: 13px;
+    line-height: 24px;
 }
 
 .products {
@@ -263,14 +266,20 @@ a {
     margin-bottom: 16px;
 }
 
-.heading__center {
-    text-align: center;
+.products__heading {
+    display: flex;
+    justify-content: center;
+    line-height: 32px;
 }
 
 .products__text {
     width: 536px;
     margin: 28px auto 34px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    justify-content: center;
 }
 
 .products__line {
@@ -318,4 +327,155 @@ a {
 
 .products__item {
     display: flex;
+}
+
+.meet {
+    margin-top: 132px;
+    margin-bottom: 114px;
+}
+
+.meet__heading {
+    line-height: 32px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.meet__text {
+    max-width: 459px;
+    margin-top: 34px;
+    margin-bottom: 37px;
+    display: flex;
+    align-items: center;
+    height: 73px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.meet__line {
+    width: 128px;
+    height: 5px;
+    background-color: #FF2D2D;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.meet__content {
+    margin-top: 66px;
+    display: flex;
+    gap: 74px;
+    align-items: flex-end;
+}
+
+.meet__person {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.meet-info__heading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    color: #000000;
+    line-height: 23px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.text_about-people {
+    max-width: 635px;
+    margin-top: 29px;
+    margin-bottom: 46px;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.meet__links {
+    display: flex;
+    gap: 28px;
+}
+
+.meet__link {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.9px;
+    color: #000000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.meet__link:hover {
+    color: #FF2D2D;
+}
+
+.meet__peoples {
+    display: flex;
+    gap: 19px;
+    margin-top: 59px;
+}
+
+.meet__people {
+    display: flex;
+    position: relative;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    overflow: hidden;
+}
+
+.meet__people:hover .meet__name-box {
+    bottom: 0px;
+}
+
+.meet__name-box {
+    background: #000000;
+    mix-blend-mode: normal;
+    width: 100%;
+    opacity: 0.5;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: -100%;
+    transition: 0.4s;
+}
+
+.meet__persone-name {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+@media (max-width: 1280px) {
+    .section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .service__info {
+        max-width: 900px;
+    }
+    .meet__content {
+        gap: 32px;
+    }
+    .meet__peoples {
+        gap: 10px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 850px) {
+    .meet__person {
+        width: 250px;
+    }
+}
+
+@media (max-width: 700px) {
+    .meet__content {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 440px) {
+    .meet__heading {
+        line-height: 42px;
+    }
 }
