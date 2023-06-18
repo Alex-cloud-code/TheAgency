@@ -69,6 +69,7 @@ a:hover {
     list-style-type: none;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .menu__link {
@@ -82,6 +83,7 @@ a:hover {
     display: flex;
     padding: 38px 23px 26px;
     transition: .3s;
+    justify-content: center;
 }
 
 .menu__link:hover {
@@ -722,10 +724,28 @@ path {
 .burger-menu::before {
     width: 40px;
     height: 6px;
-    background-color: white;
+    background-color: #FFFFFF;
     position: absolute;
     content: "";
     top: 12px;
+}
+
+.closure {
+    display: none;
+    color: #FFFFFF99;
+    font-size: 50px;
+    line-height: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 10;
+    transform: rotate(45deg);
+}
+
+.closure_visible {
+    display: block;
 }
 
 @media (max-width: 1280px) {
@@ -813,6 +833,26 @@ path {
     .get__content {
         margin-top: 43px;
     }
+    .header_burger-style {
+        min-height: 50px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    .burger-menu {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    .menu {
+        display: none;
+    }
+    .menu_vivsible {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1px;
+        padding-right: 30px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -855,26 +895,6 @@ path {
 }
 
 @media (max-width: 510px) {
-
-    .header_burger-style {
-        min-height: 50px;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-    }
-    .burger-menu {
-        display: flex;
-        justify-content: end;
-        align-items: center;
-    }
-    .menu {
-        display: none;
-    }
-    .menu_vivsible {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1px;
-    }
     .menu__link {
         display: block;
         text-align: center;
@@ -925,6 +945,9 @@ path {
         justify-content: center;
         gap: 10px;
         text-align: center;
+    }
+    .closure {
+        line-height: 60px;
     }
 }
 
