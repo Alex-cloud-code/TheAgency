@@ -697,7 +697,7 @@ path {
     fill: #313030;
 }
 
-.menu_vivsible {
+.menu_visible {
     display: none;
     grid-template-columns: repeat(2, 1fr);
     gap: 1px;
@@ -847,7 +847,7 @@ path {
     .menu {
         display: none;
     }
-    .menu_vivsible {
+    .menu_visible {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1px;
