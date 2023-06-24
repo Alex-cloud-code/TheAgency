@@ -808,6 +808,7 @@ path {
     font-size: 70px;
     color: rgba(255, 59, 59, 0.5);
     z-index: 10;
+    cursor: pointer;
 }
 
 .to-top::before {
