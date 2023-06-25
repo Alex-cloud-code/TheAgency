@@ -105,7 +105,7 @@ a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 100px;
+    padding-top: 100px;
     gap: 30px;
 }
 
@@ -197,7 +197,6 @@ a:hover {
     display: flex;
     align-items: center;
     height: 87px;
-    text-align: center;
 }
 
 .service__text {
@@ -887,7 +886,7 @@ path {
 
 @media (max-width: 780px) {
     .top__content{
-        margin-top: 50px;
+        padding-top: 50px;
         justify-content: center;
     }
     .top__text {
